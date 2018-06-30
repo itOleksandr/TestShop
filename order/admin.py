@@ -3,6 +3,9 @@ from .models import *
 
 # Register your models here.
 
+class ProductInOrderInline(admin.TabularInline):
+    model = ProductInOrder
+    extra = 0
 
 class StatusAdmin(admin.ModelAdmin):
 
@@ -14,7 +17,7 @@ admin.site.register(Status, StatusAdmin)
 
 
 class OrderAdmin(admin.ModelAdmin):
-
+    inlines = [ProductInOrderInline]
     class Meta:
         model = Order
 

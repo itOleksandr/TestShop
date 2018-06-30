@@ -11,7 +11,7 @@ class Product(models.Model):
     update = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):
-        return '%s' % self.id
+        return '%s' % self.name
 
     class Meta:
         verbose_name = 'Товар'
@@ -20,7 +20,7 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, blank=True, null=True, default=None, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='products_images')
+    image = models.ImageField(upload_to='products_images/')
     is_active = models.BooleanField(default=True)
     create = models.DateTimeField(auto_now_add=True, auto_now=False)
     update = models.DateTimeField(auto_now_add=True, auto_now=False)
