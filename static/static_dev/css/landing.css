@@ -6,7 +6,7 @@ html,body{
     padding-top:10%;
 }
 .general-container{
-    background: url("../img/bg_image.jpg");
+    background: url("../../static_prod/img/bg_image.jpg");
     background-size: 100%;
     height: 100%;
     font-family: 'Century Schoolbook L';

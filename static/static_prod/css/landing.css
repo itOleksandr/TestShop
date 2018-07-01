@@ -1,0 +1,28 @@
+html,body{
+    height: 100%;
+    max-height: 100%;
+}
+.top-container{
+    padding-top:10%;
+}
+.general-container{
+    background: url("../../static_prod/img/bg_image.jpg");
+    background-size: 100%;
+    height: 100%;
+    font-family: 'Century Schoolbook L';
+
+}
+.btn-submit{
+    margin-left: 10px;
+    height: 32px;
+}
+.form-r{
+    margin-left: 10px;
+}
+.title{
+    text-align: center;
+    margin-right: 100px;
+}
+.title, .lb{
+    color: azure;
+}
