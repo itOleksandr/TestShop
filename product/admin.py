@@ -27,3 +27,11 @@ class ProductImageAdmin(admin.ModelAdmin):
 
 admin.site.register(ProductImage, ProductImageAdmin)
 
+
+class ProductCategoryAdmin(admin.ModelAdmin):
+
+    class Meta:
+        model = ProductCategory
+
+
+admin.site.register(ProductCategory, ProductCategoryAdmin)

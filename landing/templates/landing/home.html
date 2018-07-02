@@ -6,27 +6,51 @@
         <img src="{% static 'img/slider0.jpg' %}" alt="slider" class="responsive" style="width: 100%; height: auto">
 {#        Not working class responsive#}
     </div>
-    <div class="section">
+    <div class="section section1">
         <div class="container">
             <div class="row">
-
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Новые поступления
+                    </h1>
+                </div>
                 {% for product_image in products_images %}
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div class="for_img">
-                                <img src="{{ product_image.image.url}}" class="img-responsive" style="width: 100%; height: auto">
-                            </div>
-                        <h5>{{ product_image.product.name }}</h5>
-                            <p>
-                                {{ product_image.product.description| truncatechars_html:50 }}
-                            </p>
-                            <div class="add-to-cart-btn">
-                                <div class="btn btn-success">
-                                    Добавить в корзину
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    <div class="section section-delivery">
+        <div>
+            <h3>Free shipping</h3>
+        </div>
+    </div>
+    <div class="section section2 phones-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Телефоны
+                    </h1>
+                </div>
+                {% for product_image in products_images_phones %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    <div class="section section3 laptop-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Ноутбуки
+                    </h1>
+                </div>
+                {% for product_image in products_images_laptops %}
+                    {% include 'landing/product_item.html' %}
                 {% endfor %}
             </div>
 
