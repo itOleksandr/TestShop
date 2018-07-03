@@ -10,42 +10,57 @@
                 {% endfor %}
             </div>
             <div class="col-lg-6">
-                <h1 class="text-center" >
+                <h1 class="text-center name_product" >
                     {{ product.name }}
                 </h1>
                 <div>
-                    <p>
-                        Price:{{ product.price }}
-                    </p>
+                    <div class="price">
+                        Цена: {{ product.price }} UAH
+                    </div>
                 </div>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <div class="deccription_nav">
+                     <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
                       <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        <a class="nav-link active" data-toggle="tab" href="#descriptions">
+                            Описание
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        <a class="nav-link" data-toggle="tab" href="#delivery">Доставка</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
                       </li>
                     </ul>
 
+                    <!-- Tab panes -->
                     <div class="tab-content">
-                      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">.sdfds..</div>
-                      <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">..s.</div>
-                      <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">..SDF.</div>
+                      <div class="tab-pane container active" id="descriptions">
+                          {{ product.description }}
+                      </div>
+                      <div class="tab-pane container fade" id="delivery">
+                          <h3>Куда вам отправить товар?</h3>
+                      </div>
+                      <div class="tab-pane container fade" id="menu2">...</div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <form class="form-inline" id="form_buying_product" action="" >
+                        <label for=""><input type="number" class="form-control" name="number" id="number"></label>
+                        <button type="submit"  id="submit_btn" class="btn btn-success btn-buy"
+                            data-product_id = "{{ product.id }}"
+                                data-name ="{{ product.name }}"
+                                data-price ="{{ product.price }}">
+                        Купить
+                        </button>
+                    </form>
 
-                    <script>
-                      $(function () {
-                        $('#myTab li:last-child a').table()
-                      })
-                    </script>
-                            </div>
-                        </div>
                     </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

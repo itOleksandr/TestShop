@@ -55,3 +55,50 @@ html,body{
     text-align: center;
     color: white;
 }
+.price{
+    background-color: #55e073;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+    margin-bottom: 20px;
+    border: 1px solid #2b7d3e
+
+}
+.name_product{
+    color:#55E073;
+}
+.form-group{
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+.btn-buy{
+    margin-left: 10px;
+}
+.navbar-top{
+    height: 20px;
+    background-color:#24b946d1;
+}
+.navbar-main{
+    background-color:#6bd283fc;
+    height: 50px;
+}
+.navbar-right{
+    padding-right: 80px;
+}
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 13px 0px;
+}
+.basket-items{
+    position: absolute;
+    top:50px;
+    width: 100%;
+    background-color: rgba(65, 161, 81, 0.98);
+    z-index: 10;
+}
+.hidden{
+    visibility: hidden;
+}
