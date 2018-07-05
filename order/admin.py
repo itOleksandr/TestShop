@@ -32,3 +32,12 @@ class ProductInOrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProductInOrder, ProductInOrderAdmin)
+
+
+class ProductInBasketAdmin(admin.ModelAdmin):
+
+    class Meta:
+        model = ProductInBasket
+
+
+admin.site.register(ProductInBasket, ProductInBasketAdmin)
